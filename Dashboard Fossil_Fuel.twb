@@ -1,0 +1,1815 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.1217.2247                               -->
+<workbook original-version='18.1' source-build='2021.3.6 (20213.21.1217.2247)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-off' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='coal-production-by-country+' inline='true' name='federated.0hk5vgf1r4aeu118gyfi015opy3p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='coal-production-by-country' name='textscan.10r6xzv1ks2io611ro8ax0p05wbp'>
+            <connection class='textscan' directory='C:/Users/soni ji/Desktop/BRM/Mine/Tableau/Fossil Fuels' filename='coal-production-by-country.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='coal-consumption-by-country-terawatt-hours-twh' name='textscan.0f0nwy81w6p7pp11z3nw21be55vs'>
+            <connection class='textscan' directory='C:/Users/soni ji/Desktop/BRM/Mine/Tableau/Fossil Fuels' filename='coal-consumption-by-country-terawatt-hours-twh.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='oil-consumption-by-country' name='textscan.05swk1c0seygjd128micq191pkmx'>
+            <connection class='textscan' directory='C:/Users/soni ji/Desktop/BRM/Mine/Tableau/Fossil Fuels' filename='oil-consumption-by-country.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='gas-consumption-by-country' name='textscan.0632e8c0o2vrt61bhji8r1hedhym'>
+            <connection class='textscan' directory='C:/Users/soni ji/Desktop/BRM/Mine/Tableau/Fossil Fuels' filename='gas-consumption-by-country.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0f0nwy81w6p7pp11z3nw21be55vs' name='coal-consumption-by-country-terawatt-hours-twh.csv' table='[coal-consumption-by-country-terawatt-hours-twh#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='Entity' ordinal='0' />
+            <column datatype='string' name='Code' ordinal='1' />
+            <column datatype='integer' name='Year' ordinal='2' />
+            <column datatype='real' name='Coal Consumption - TWh' ordinal='3' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.10r6xzv1ks2io611ro8ax0p05wbp' name='coal-production-by-country.csv' table='[coal-production-by-country#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='integer' name='Year' ordinal='2' />
+              <column datatype='real' name='Coal production (TWh)' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.10r6xzv1ks2io611ro8ax0p05wbp' name='gas-production-by-country.csv' table='[gas-production-by-country#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='integer' name='Year' ordinal='2' />
+              <column datatype='real' name='Gas production (TWh)' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.10r6xzv1ks2io611ro8ax0p05wbp' name='oil-production-by-country.csv' table='[oil-production-by-country#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='integer' name='Year' ordinal='2' />
+              <column datatype='real' name='Oil production (TWh)' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0f0nwy81w6p7pp11z3nw21be55vs' name='coal-consumption-by-country-terawatt-hours-twh.csv' table='[coal-consumption-by-country-terawatt-hours-twh#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='integer' name='Year' ordinal='2' />
+              <column datatype='real' name='Coal Consumption - TWh' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.05swk1c0seygjd128micq191pkmx' name='oil-consumption-by-country.csv' table='[oil-consumption-by-country#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='integer' name='Year' ordinal='2' />
+              <column datatype='real' name='Oil Consumption - TWh' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0632e8c0o2vrt61bhji8r1hedhym' name='gas-consumption-by-country.csv' table='[gas-consumption-by-country#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='Entity' ordinal='0' />
+              <column datatype='string' name='Code' ordinal='1' />
+              <column datatype='integer' name='Year' ordinal='2' />
+              <column datatype='real' name='Gas Consumption - TWh' ordinal='3' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Coal Consumption - TWh]' value='[coal-consumption-by-country-terawatt-hours-twh.csv].[Coal Consumption - TWh]' />
+          <map key='[Coal production (TWh)]' value='[coal-production-by-country.csv].[Coal production (TWh)]' />
+          <map key='[Code (coal-consumption-by-country-terawatt-hours-twh.csv)]' value='[coal-consumption-by-country-terawatt-hours-twh.csv].[Code]' />
+          <map key='[Code (gas-consumption-by-country.csv)]' value='[gas-consumption-by-country.csv].[Code]' />
+          <map key='[Code (gas-production-by-country.csv)]' value='[gas-production-by-country.csv].[Code]' />
+          <map key='[Code (oil-consumption-by-country.csv)]' value='[oil-consumption-by-country.csv].[Code]' />
+          <map key='[Code (oil-production-by-country.csv)]' value='[oil-production-by-country.csv].[Code]' />
+          <map key='[Code]' value='[coal-production-by-country.csv].[Code]' />
+          <map key='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' value='[coal-consumption-by-country-terawatt-hours-twh.csv].[Entity]' />
+          <map key='[Entity (gas-consumption-by-country.csv)]' value='[gas-consumption-by-country.csv].[Entity]' />
+          <map key='[Entity (gas-production-by-country.csv)]' value='[gas-production-by-country.csv].[Entity]' />
+          <map key='[Entity (oil-consumption-by-country.csv)]' value='[oil-consumption-by-country.csv].[Entity]' />
+          <map key='[Entity (oil-production-by-country.csv)]' value='[oil-production-by-country.csv].[Entity]' />
+          <map key='[Entity]' value='[coal-production-by-country.csv].[Entity]' />
+          <map key='[Gas Consumption - TWh]' value='[gas-consumption-by-country.csv].[Gas Consumption - TWh]' />
+          <map key='[Gas production (TWh)]' value='[gas-production-by-country.csv].[Gas production (TWh)]' />
+          <map key='[Oil Consumption - TWh]' value='[oil-consumption-by-country.csv].[Oil Consumption - TWh]' />
+          <map key='[Oil production (TWh)]' value='[oil-production-by-country.csv].[Oil production (TWh)]' />
+          <map key='[Year (coal-consumption-by-country-terawatt-hours-twh.csv)]' value='[coal-consumption-by-country-terawatt-hours-twh.csv].[Year]' />
+          <map key='[Year (gas-consumption-by-country.csv)]' value='[gas-consumption-by-country.csv].[Year]' />
+          <map key='[Year (gas-production-by-country.csv)]' value='[gas-production-by-country.csv].[Year]' />
+          <map key='[Year (oil-consumption-by-country.csv)]' value='[oil-consumption-by-country.csv].[Year]' />
+          <map key='[Year (oil-production-by-country.csv)]' value='[oil-production-by-country.csv].[Year]' />
+          <map key='[Year]' value='[coal-production-by-country.csv].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[coal-production-by-country.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[gas-production-by-country.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[oil-production-by-country.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[coal-consumption-by-country-terawatt-hours-twh.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[oil-consumption-by-country.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[gas-consumption-by-country.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity]</local-name>
+            <parent-name>[coal-production-by-country.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code]</local-name>
+            <parent-name>[coal-production-by-country.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[coal-production-by-country.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coal production (TWh)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coal production (TWh)]</local-name>
+            <parent-name>[coal-production-by-country.csv]</parent-name>
+            <remote-alias>Coal production (TWh)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity (gas-production-by-country.csv)]</local-name>
+            <parent-name>[gas-production-by-country.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code (gas-production-by-country.csv)]</local-name>
+            <parent-name>[gas-production-by-country.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (gas-production-by-country.csv)]</local-name>
+            <parent-name>[gas-production-by-country.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gas production (TWh)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Gas production (TWh)]</local-name>
+            <parent-name>[gas-production-by-country.csv]</parent-name>
+            <remote-alias>Gas production (TWh)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity (oil-production-by-country.csv)]</local-name>
+            <parent-name>[oil-production-by-country.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code (oil-production-by-country.csv)]</local-name>
+            <parent-name>[oil-production-by-country.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (oil-production-by-country.csv)]</local-name>
+            <parent-name>[oil-production-by-country.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Oil production (TWh)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Oil production (TWh)]</local-name>
+            <parent-name>[oil-production-by-country.csv]</parent-name>
+            <remote-alias>Oil production (TWh)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]</local-name>
+            <parent-name>[coal-consumption-by-country-terawatt-hours-twh.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code (coal-consumption-by-country-terawatt-hours-twh.csv)]</local-name>
+            <parent-name>[coal-consumption-by-country-terawatt-hours-twh.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (coal-consumption-by-country-terawatt-hours-twh.csv)]</local-name>
+            <parent-name>[coal-consumption-by-country-terawatt-hours-twh.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Coal Consumption - TWh</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Coal Consumption - TWh]</local-name>
+            <parent-name>[coal-consumption-by-country-terawatt-hours-twh.csv]</parent-name>
+            <remote-alias>Coal Consumption - TWh</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity (oil-consumption-by-country.csv)]</local-name>
+            <parent-name>[oil-consumption-by-country.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code (oil-consumption-by-country.csv)]</local-name>
+            <parent-name>[oil-consumption-by-country.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (oil-consumption-by-country.csv)]</local-name>
+            <parent-name>[oil-consumption-by-country.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Oil Consumption - TWh</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Oil Consumption - TWh]</local-name>
+            <parent-name>[oil-consumption-by-country.csv]</parent-name>
+            <remote-alias>Oil Consumption - TWh</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Entity</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Entity (gas-consumption-by-country.csv)]</local-name>
+            <parent-name>[gas-consumption-by-country.csv]</parent-name>
+            <remote-alias>Entity</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Code (gas-consumption-by-country.csv)]</local-name>
+            <parent-name>[gas-consumption-by-country.csv]</parent-name>
+            <remote-alias>Code</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year (gas-consumption-by-country.csv)]</local-name>
+            <parent-name>[gas-consumption-by-country.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gas Consumption - TWh</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Gas Consumption - TWh]</local-name>
+            <parent-name>[gas-consumption-by-country.csv]</parent-name>
+            <remote-alias>Gas Consumption - TWh</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Coal Consumption - TWh]' role='measure' type='quantitative' />
+      <column caption='Coal P' datatype='real' name='[Coal production (TWh)]' role='measure' type='quantitative' />
+      <column datatype='string' hidden='true' name='[Code (coal-consumption-by-country-terawatt-hours-twh.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' hidden='true' name='[Code (gas-consumption-by-country.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' hidden='true' name='[Code (gas-production-by-country.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='string' hidden='true' name='[Code (oil-consumption-by-country.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' hidden='true' name='[Code (oil-production-by-country.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='string' hidden='true' name='[Code]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='string' name='[Entity (gas-consumption-by-country.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='string' name='[Entity (gas-production-by-country.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='string' name='[Entity (oil-consumption-by-country.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='string' name='[Entity (oil-production-by-country.csv)]' role='dimension' semantic-role='' type='nominal' />
+      <column datatype='real' name='[Gas Consumption - TWh]' role='measure' type='quantitative' />
+      <column caption='Gas P' datatype='real' name='[Gas production (TWh)]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Oil Consumption - TWh]' role='measure' type='quantitative' />
+      <column caption='Oil P' datatype='real' name='[Oil production (TWh)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Year (coal-consumption-by-country-terawatt-hours-twh.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year (gas-consumption-by-country.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year (gas-production-by-country.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year (oil-consumption-by-country.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year (oil-production-by-country.csv)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='coal-consumption-by-country-terawatt-hours-twh.csv' datatype='table' name='[__tableau_internal_object_id__].[coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='coal-production-by-country.csv' datatype='table' name='[__tableau_internal_object_id__].[coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='gas-consumption-by-country.csv' datatype='table' name='[__tableau_internal_object_id__].[gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='gas-production-by-country.csv' datatype='table' name='[__tableau_internal_object_id__].[gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='oil-consumption-by-country.csv' datatype='table' name='[__tableau_internal_object_id__].[oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='oil-production-by-country.csv' datatype='table' name='[__tableau_internal_object_id__].[oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861]' role='measure' type='quantitative' />
+      <column-instance column='[Coal Consumption - TWh]' derivation='Attribute' name='[attr:Coal Consumption - TWh:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Coal production (TWh)]' derivation='Attribute' name='[attr:Coal production (TWh):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gas Consumption - TWh]' derivation='Attribute' name='[attr:Gas Consumption - TWh:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gas production (TWh)]' derivation='Attribute' name='[attr:Gas production (TWh):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Oil Consumption - TWh]' derivation='Attribute' name='[attr:Oil Consumption - TWh:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Oil production (TWh)]' derivation='Attribute' name='[attr:Oil production (TWh):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Coal production (TWh)]' derivation='Sum' name='[sum:Coal production (TWh):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Gas production (TWh)]' derivation='Sum' name='[sum:Gas production (TWh):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Oil production (TWh)]' derivation='Sum' name='[sum:Oil production (TWh):qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))' hidden='true' name='[Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Coal Consumption - EJ:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Coal Consumption - TWh:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Coal production (TWh):qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal Consumption - EJ:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal production (TWh):qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal (TWh; direct energy):qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil (TWh; direct energy):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Oil Consumption - EJ:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Oil Consumption - TWh:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Oil production (TWh):qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil Consumption - EJ:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil production (TWh):qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas (TWh; direct energy):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Gas Consumption - EJ:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Gas Consumption - TWh:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Gas production (TWh):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas Consumption - EJ:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas production (TWh):qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='coal-consumption-by-country-terawatt-hours-twh.csv' id='coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB'>
+            <properties context=''>
+              <relation connection='textscan.0f0nwy81w6p7pp11z3nw21be55vs' name='coal-consumption-by-country-terawatt-hours-twh.csv' table='[coal-consumption-by-country-terawatt-hours-twh#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='Coal Consumption - TWh' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='coal-production-by-country.csv' id='coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6'>
+            <properties context=''>
+              <relation connection='textscan.10r6xzv1ks2io611ro8ax0p05wbp' name='coal-production-by-country.csv' table='[coal-production-by-country#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='Coal production (TWh)' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='gas-consumption-by-country.csv' id='gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B'>
+            <properties context=''>
+              <relation connection='textscan.0632e8c0o2vrt61bhji8r1hedhym' name='gas-consumption-by-country.csv' table='[gas-consumption-by-country#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='Gas Consumption - TWh' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='gas-production-by-country.csv' id='gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5'>
+            <properties context=''>
+              <relation connection='textscan.10r6xzv1ks2io611ro8ax0p05wbp' name='gas-production-by-country.csv' table='[gas-production-by-country#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='Gas production (TWh)' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='oil-consumption-by-country.csv' id='oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11'>
+            <properties context=''>
+              <relation connection='textscan.05swk1c0seygjd128micq191pkmx' name='oil-consumption-by-country.csv' table='[oil-consumption-by-country#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='Oil Consumption - TWh' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='oil-production-by-country.csv' id='oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861'>
+            <properties context=''>
+              <relation connection='textscan.10r6xzv1ks2io611ro8ax0p05wbp' name='oil-production-by-country.csv' table='[oil-production-by-country#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='Entity' ordinal='0' />
+                  <column datatype='string' name='Code' ordinal='1' />
+                  <column datatype='integer' name='Year' ordinal='2' />
+                  <column datatype='real' name='Oil production (TWh)' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Entity (oil-production-by-country.csv)]' />
+                <expression op='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Year (oil-production-by-country.csv)]' />
+                <expression op='[Year (coal-consumption-by-country-terawatt-hours-twh.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861' />
+            <second-end-point object-id='coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Entity (oil-consumption-by-country.csv)]' />
+                <expression op='[Entity (gas-consumption-by-country.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Year (oil-consumption-by-country.csv)]' />
+                <expression op='[Year (gas-consumption-by-country.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11' />
+            <second-end-point object-id='gas-consumption-by-country.csv_9AF3C9A762C4464980141AB3CECFCE6B' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Entity]' />
+                <expression op='[Entity (gas-production-by-country.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Year]' />
+                <expression op='[Year (gas-production-by-country.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='coal-production-by-country.csv_12D9763C6321436DAE9276FD7032DDA6' />
+            <second-end-point object-id='gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' />
+                <expression op='[Entity (oil-consumption-by-country.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Year (coal-consumption-by-country-terawatt-hours-twh.csv)]' />
+                <expression op='[Year (oil-consumption-by-country.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='coal-consumption-by-country-terawatt-hours-twh.csv_5CA456AFC9D44EA7BFCEF9D6526F21AB' />
+            <second-end-point object-id='oil-consumption-by-country.csv_68F34C02EE834327B674A5FAB8968D11' />
+          </relationship>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Entity (gas-production-by-country.csv)]' />
+                <expression op='[Entity (oil-production-by-country.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Year (gas-production-by-country.csv)]' />
+                <expression op='[Year (oil-production-by-country.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='gas-production-by-country.csv_04C6A1DEB6E5483090F1A6E1D58B56D5' />
+            <second-end-point object-id='oil-production-by-country.csv_B3201F852E4E4D26B6ABA617F9B34861' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0hk5vgf1r4aeu118gyfi015opy3p'>
+      <datasources>
+        <datasource caption='coal-production-by-country+' name='federated.0hk5vgf1r4aeu118gyfi015opy3p' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0hk5vgf1r4aeu118gyfi015opy3p'>
+        <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+        <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))]'>
+        <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' member='&quot;Africa&quot;' />
+          <groupfilter function='member' level='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' member='&quot;India&quot;' />
+          <groupfilter function='member' level='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' member='&quot;United States&quot;' />
+        </groupfilter>
+      </filter>
+      <filter class='categorical' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:ok]'>
+        <groupfilter function='member' level='[none:Year:ok]' member='1993' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+        <target field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:ok]' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_7479F7C76D9E463AA321D2F1D3B8DBAA]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Consumption' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_27167036141D45AB9157973E6CA64195]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Production' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Consumption'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='coal-production-by-country+' name='federated.0hk5vgf1r4aeu118gyfi015opy3p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hk5vgf1r4aeu118gyfi015opy3p'>
+            <column datatype='real' name='[Coal Consumption - TWh]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' role='dimension' semantic-role='' type='nominal' />
+            <column datatype='real' name='[Gas Consumption - TWh]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Oil Consumption - TWh]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Coal Consumption - TWh]' derivation='Attribute' name='[attr:Coal Consumption - TWh:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gas Consumption - TWh]' derivation='Attribute' name='[attr:Gas Consumption - TWh:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Oil Consumption - TWh]' derivation='Attribute' name='[attr:Oil Consumption - TWh:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' derivation='None' name='[none:Entity (coal-consumption-by-country-terawatt-hours-twh.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Coal Consumption - TWh]' derivation='Sum' name='[sum:Coal Consumption - TWh:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gas Consumption - TWh]' derivation='Sum' name='[sum:Gas Consumption - TWh:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Oil Consumption - TWh]' derivation='Sum' name='[sum:Oil Consumption - TWh:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Coal Consumption - TWh:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Gas Consumption - TWh:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Oil Consumption - TWh:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal Consumption - TWh:qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas Consumption - TWh:qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil Consumption - TWh:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal Consumption - TWh:qk]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas Consumption - TWh:qk]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil Consumption - TWh:qk]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' scope='rows' value='Consumption in TWh' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' value='n#,##0&quot;TWh&quot;;-#,##0&quot;TWh&quot;' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' value='n#,##0&quot;TWh&quot;;-#,##0&quot;TWh&quot;' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]' />
+              <text column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]</rows>
+        <cols>([federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Entity (coal-consumption-by-country-terawatt-hours-twh.csv):nk] / [federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{07147A9B-2657-4EB9-8E44-4B7B13BE6CD0}' />
+    </worksheet>
+    <worksheet name='Production'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='coal-production-by-country+' name='federated.0hk5vgf1r4aeu118gyfi015opy3p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hk5vgf1r4aeu118gyfi015opy3p'>
+            <column caption='Coal P' datatype='real' name='[Coal production (TWh)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' role='dimension' semantic-role='' type='nominal' />
+            <column caption='Gas P' datatype='real' name='[Gas production (TWh)]' role='measure' type='quantitative' />
+            <column caption='Oil P' datatype='real' name='[Oil production (TWh)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Coal production (TWh)]' derivation='Attribute' name='[attr:Coal production (TWh):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gas production (TWh)]' derivation='Attribute' name='[attr:Gas production (TWh):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Oil production (TWh)]' derivation='Attribute' name='[attr:Oil production (TWh):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Entity (coal-consumption-by-country-terawatt-hours-twh.csv)]' derivation='None' name='[none:Entity (coal-consumption-by-country-terawatt-hours-twh.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Coal production (TWh)]' derivation='Sum' name='[sum:Coal production (TWh):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Gas production (TWh)]' derivation='Sum' name='[sum:Gas production (TWh):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Oil production (TWh)]' derivation='Sum' name='[sum:Oil production (TWh):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Coal production (TWh):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Gas production (TWh):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hk5vgf1r4aeu118gyfi015opy3p].[attr:Oil production (TWh):qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal production (TWh):qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas production (TWh):qk]' included-values='non-null' />
+          <filter class='quantitative' column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil production (TWh):qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Coal production (TWh):qk]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Gas production (TWh):qk]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[sum:Oil production (TWh):qk]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))]</column>
+            <column>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' scope='rows' value='Production in TWh' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' value='n#,##0&quot;TWh&quot;;-#,##0&quot;TWh&quot;' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' value='n#,##0&quot;TWh&quot;;-#,##0&quot;TWh&quot;' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]' />
+              <text column='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Multiple Values]</rows>
+        <cols>([federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Entity (coal-consumption-by-country-terawatt-hours-twh.csv):nk] / [federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{528CA556-7450-444A-82C1-C0AA2AF2982A}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>COMPARISION</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='coal-production-by-country+' name='federated.0hk5vgf1r4aeu118gyfi015opy3p' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0hk5vgf1r4aeu118gyfi015opy3p'>
+        <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+        <column-instance column='[Year]' derivation='None' name='[none:Year:ok]' pivot='key' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='16' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='6625' id='17' type-v2='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='91375' id='11' param='horz' type-v2='layout-flow' w='98400' x='800' y='7625'>
+              <zone h='91375' id='7' param='horz' type-v2='layout-flow' w='82400' x='800' y='7625'>
+                <zone h='91375' id='5' type-v2='layout-basic' w='82400' x='800' y='7625'>
+                  <zone h='45687' id='3' name='Consumption' w='82400' x='800' y='7625'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='45688' id='9' name='Production' w='82400' x='800' y='53312'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone fixed-size='160' h='91375' id='10' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='7625'>
+                <zone h='8000' id='12' mode='checkdropdown' name='Production' param='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))]' type-v2='filter' values='relevant' w='16000' x='83200' y='7625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='11750' id='30' mode='slider' name='Production' param='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:ok]' type-v2='filter' values='database' w='16000' x='83200' y='15625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true'>COMPARISION</run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='51' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='6625' id='17' type-v2='title' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45687' id='3' is-fixed='true' name='Consumption' w='82400' x='800' y='7625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8000' id='12' mode='checkdropdown' name='Production' param='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[Action (Entity (coal-consumption-by-country-terawatt-hours-twh.csv))]' type-v2='filter' values='relevant' w='16000' x='83200' y='7625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='11750' id='30' mode='slider' name='Production' param='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:ok]' type-v2='filter' values='database' w='16000' x='83200' y='15625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45688' id='9' is-fixed='true' name='Production' w='82400' x='800' y='53312'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B0DF71F5-4F7A-400C-87C2-D37F3A4ED946}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.35417' source-height='44'>
+    <window class='worksheet' name='Consumption'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='159'>
+            <card pane-specification-id='0' param='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]</field>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Entity (coal-consumption-by-country-terawatt-hours-twh.csv):nk]</field>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year (coal-consumption-by-country-terawatt-hours-twh.csv):qk]</field>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B9138EBD-D73D-4693-9EAF-A60B9A2CE3FF}' />
+    </window>
+    <window class='worksheet' name='Production'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='159'>
+            <card pane-specification-id='0' param='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]</field>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Entity (coal-consumption-by-country-terawatt-hours-twh.csv):nk]</field>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year (coal-consumption-by-country-terawatt-hours-twh.csv):qk]</field>
+            <field>[federated.0hk5vgf1r4aeu118gyfi015opy3p].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0EF7DAB3-D6F0-4BC6-938B-6AB8ED68097B}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Consumption'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0hk5vgf1r4aeu118gyfi015opy3p].[:Measure Names]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Production'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{564FDF4D-D189-406B-9FC2-4A42FA4032A7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Consumption' width='192'>
+      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
+      WRIBEGra/wfE6IcwYBsVDAAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      B1GclsGayO8AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Production' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABP+AAAT/gEHlDmE
+      AAAgAElEQVR4nO3d53MbeZ7f8Xd3A2jkDBBgJsEkapQm7MTd2dnbMHu3d767Op/te+K6Z67y
+      ufw/+JkfOTyxH9ll+4ntqquyy/bube3uTdxJmhkFUiTFICaQIJFz7m4/oIaSZqjRcEYQKfbv
+      VaUSCaLRv8YPn0749q8lwzAMBMGk5JNugCCcpFMXgFqtdtJNEDBPP5y6AHS73ZNuwjemt2vs
+      7OcBg42VRfZzJQC0botqrXWyjfuOnqZ+ACiXSl95rF3JkinXaesP38u39LJRZ93W+ia5lkHU
+      Z2NxZYPzMzLvra4xNdaPpqtsrMzjCMRQ9TqpdImLLzyPeupWOWdDMpnEnt6l0epgdYWwdkrk
+      c2kCiQs4XArrC8s0DBuXz08/MJ3ojm/L0EmmUtSzKfJthZGREcIelXD/GF67RKuSQXIPkBgZ
+      oNFs0irvkjPHXsWJqXcMZp+ZpVsrUevInJscA3Q6WotWW2d3d/cr04gtwLfUbdUYnrrIYMTJ
+      1n4Zp9OJYrPjtdiRFQPVG6GWWmdtS6fRbGB3ebAqJ93qs8vpdKJLEhISTpebVq3AylaZyNgk
+      UrdDu6vh9Xi+Mp30xWnQTqfDaTgjWqlU8BzRUOHJMks/HG4BdF1H07STbAsAmqY9dQdgZ5FZ
+      +uEwAKqqnmQ7DnU6HZxO50k3w/TM0g8nehBsGMap2O0SzOvYB8Hteoml1S1Cff0M9IVoVHIs
+      rW7jDUVxSU32siUGx6fIJldpdBSGB8IsLi7jjw3gtlkYirq5tlbgwpCLO3s1bE4n0VAAj8vR
+      i+UThK917ACsrqwiWVQajSYAO9t7zFy6xNriLRrApUvnmJ9fxGILMR5oUVICRENhxqYSrC8u
+      sp1qo1p0NveKBD12UqU6xXyGZy9dPDwOMcO+52lnln44dgAcqopvaJLk6hL1uh+bRaJeb6F1
+      dSQMWo06ktVFp9OgWmvj8Ck0704b9ttZTFaZGvCwmqoQ8cj0xSLk9zaRJAlFUVAUBYtFnJ09
+      aWbph2Mv4cjkNHfW1ugfHmVrK8nkxAR31tYYHp/EIbVY304zNZmglNml0vHQ77Jg6+9HAXzh
+      OKOUCYQ8jCgunB4HqqJi7+/vwaIJwqNJp60culQq4fP5TroZpmeWfhClEIKpiQAIpiYCIJia
+      CIBgaiIAgqmJAAimJgIgmJoIgGBqIgCCqR27FEJrVVlY3iAQiTEYC9NtN1heXsMdjBLzO7iT
+      3CeRGKecTVHpKPjtsLWbxmJ3EY+G8XvspDJVYkEH6WwZuy+A33U6rkUQzOfYAcjvbNCxuggF
+      /QCUM0lquo3RUJClpXkmE0PcXllDb3cJ2Lt0g7PYlTxjUwlWFhYwvCob2TZUoWVRWZvfweVy
+      cfmZmce+cILwKMcOQHB4GmezwdLCIlcuX8DXN8qsr8nS4i1sVgt2pwujtYlVDePztCk2O4fT
+      +u0K68Uuw14LqVqH8aCCfXKa/N4mhmGIcuhTxCz9cOwAVIo5knsZ3L4At5eWiEWCbKfSuDwB
+      PJYON24s0D82RW57ldU9mYuX7KRKTiQgGI2wu7ZHKBwmU89iUVVsVgWn0ynKoU8Zs/TDt68G
+      NXRqjRYu5+O9ksssVYinnVn64dufBZLkx/7hF4QnTZwGFUxNBEAwNREAwdREAARTEwEQTE0E
+      QDA1EQDB1EQABFM70QB0Wk1anZMfkl0wr2MXe1T31riRrDMyGGcwFqa4v83KTg67w4VTalGp
+      NwnER8klV+loEiNjI8xdu05sfBKl2yYR9/D72wVeGHGyWdRpd9qEwxGG+6O9WD5B+FrHDoBh
+      ceFR61QqVYiFSWcrXLpymeWFeZqSxOUrF7l54wZOzxCDgSZZxcfI0DBjUwm2lhZZzzQYDNjY
+      LLSJ+xyUpCCl/C5GPCKqQU8Rs/TDsQOgyxbC4RDpTJH0/j4+j4319U26uoyNDlsbG9j9/VRz
+      e2w0DEbOj5HaP5g2Evbw+UqGy4kwc+s5BnxOHHaVhiyLatBTxiz9cOxqUF3rUigU8fh8pNMZ
+      BvrjlIoFnB4/FkmjUKoRCPhoN2q0dRmv20m73cZqs4Gu0Wh1cKgWGq0uqlXBkBR0rYvNZgPM
+      U4V42pmlH8TguMKRzNIP4jSoYGoiAIKpiQAIpiYCIJiaCIBgaiIAgqmJAAimJgIgmJoIgGBq
+      36rYo17O0zBUQj4XWqfB8u01XMEo/UEXd7b3GU+MUcntUe1a8Fo1tlMZZNXJQCyC120nnasR
+      9dvJ5MqoXj8+pxgcVzgZx68G1Tqs375Fwz1KyOeinNmhpbgYCwdZWJhnYnyA2yt36LZa+G1d
+      usPnsckPDo67kmmhl2Uaso2VzSQej4eLs1O9WD5B+FrHDsDSzU+pdSXSe3twbghPZIgRe5WF
+      hQVsVisOjxd9fRtVjRDwtyg07g2O61MV1ksaI14rqXqXsaCCQwyOeyqZpR+OHYBzV16GZpGl
+      vSYry8tEQ352UmmcLi9uS4cb124RG50kt73Cyo7MxSt2UiUHEhCKhtlZSREajJHezKDYbFgt
+      Cg6HQ5RDnzJm6YfvNDhupdbA43Y91gaZpQrxtDNLP3ynwXEf94dfEJ40cRpUMDURAMHURAAE
+      UxMBEExNBEAwNREAwdREAARTEwEQTO1EA9Btt2h3xeC4wsk5fjWoYbB64wNK9mGenxminEmy
+      vJ3F7vTglJuUqw1CA+Nkt1foaDIjY0PMXbtJ31gCi9YhEffywe08z4+42Ch06WodwuEog7Fw
+      L5bvTPnkvd+yn2/y+pt/iMcm8dE7vyVf6/Daj37Ie7/8FZ74KBfGQvz+szkmpi+SSS6zvrXN
+      hakporMvkbz6axKv/JzM+hLZQpoL5y/j8/uQJemkF+3EHDsAhfQ2rkCMSuPg9/10mYtXLrOy
+      ME9dl7h85QI3b8zhcA8wEWiRk30MDw7eGxw3XSPut7KZbxLz2SkafgrZFAN9IVEN+gj9g0Ok
+      szeoNDo4ZYl8uYRFkknt7JKud/ErCp/N3eYnP/s57/z27/mDH79B573fMHt+go/nb9Jpt1m/
+      vUC1UGQ/dYdmPk/fzCucH//qyscs/XDsALQ7OvncPrslK8MhOx6Xle1kio4mYaVDamcX1dtH
+      vZgh2TLonxlj/+7guOGQm+urOS6Oh7i1maPf58TldNAqi8FxH03HF4ozGl0jU2kSUBUUq5uJ
+      IS/Fhspf/eWf8+F7v8EwLHR0DSQFxXLwfqqeCI3dXxO79AfsXfsNfS/8MchtLo8PkKzqR77f
+      ZumHYy9hbHCUWP8giXaXTCbL0EiCXCbD4LkZrJJGOldiciBMs+alqcn4VBl7YhwL4A3FedYR
+      xOVQuewO4bBZcEsWAs5EDxbtrNFZuvE5pa6bscoad7RBhvr8bGTaPP+8j6sfvosnmuD8WJj3
+      33mHC8+/DEiMj08hSQoDifOMDcWQKheYGgyQtiRw+DzEnbaTXrATJQbHfQoZug6STC933c3S
+      D2d/G3cGdPN5OptbPZ2HOnsOWTXftdkiAE+B5tw8+f/wH3s6j/i/+zfIfX09ncdp9DUBMLh/
+      50gy8aky4ex6aABWbn7C9eUkiizxo5//KX6HCIBw9hwZgHoxw9zSOqH4IHZFxqKID79wNh0Z
+      AItNJTE9SzAURAJsyhNulSA8IUfWAllsDprlLJ989CFvv/X3VFqn6kypIDw2R24BDL3L1naS
+      YGyYYZ8Pl03sAgln05FbANmq8uprr9Jtlrlx9SNKYgsgnFFHbgH0bpsPP/gAmzvEC99/g4D9
+      3hagWsiwsbOPJxhlpD9Ku1FiYWmDYF8cr1VjM5UlMTlDbvcO1Y7CQNjN8tomrkCYoMdFLORi
+      aavIZL+LrVQFTzhCxOd8YgssCPc7OgDtBiMzl5idmjh40n3bCZcvSLTZIl0sQX+UWiFDQ5Nw
+      OOxs72xxYXac+cUlLBYXMVebujWE330wOO7awgJGs0qjpbG9XUV1qiwvLbKmKLz43CUMwzgc
+      I1S450lUqxi6/sD7bpZ+OHIXyMDg1vWrvP3227z99ttUWl96giSj6xqGYeCLjfPSc8+wu7V+
+      5AwM7nVe0G1ju9Sh32Mh09Bxygrjk9N4nNbHtkDC43HKSsR65sgtgGJz8vNf/BnRcPArfyvm
+      0qSzebz+EPNz84wMxdja2ScQ6cdj7TB3a43xqXPkdtZI1S2cH7aRbYSQgUA0RqGdJRgOUdEK
+      qG4PitWKFAohSdLhP1kWV2re70l8Cy/J8gPvu/yl38+qowNgtRMOWqlUKgA4XW4U+aATApE4
+      gUgcDINuLILFYuGZQORw2kCkHwDPxMzhY5HYQY2JYnczPeEGYHLMc/h3rzP2OJdJEL6xh5ZC
+      3Pz4HXaKHayKxEs/+Ale+5eeIEmmuGBCONse+gm226wUShlURUYzDEB8FyCcPUcGoFHOYfXH
+      mZ06GP5ctYgPv3A2Hb0FkCRsqoNA4KAISNTCCWfVkQFweIIMeQw6nYNRARRRDCecUQ8/CP7o
+      LVb2Klhlidd/+gt8drEZEM6ehwbAIis0W20MRUI3x3ciggk99JuOselzOBUDh68Pr1j7C2fU
+      QwOwenuB6WdfxdPJkKmLTYBwNh19PYChM3vlZa59epVg4gp9zntbgEalwJ2tXYLRfuKRAFqn
+      ycrKKqH4CA6pxcZOhsTkJIW9bapdhajXxp3NHVSPn2jQR9jvZH23zEjUyW66jCsQIuhxPLEF
+      FoT7HRmAYmqdubVd8vk87GcZHB45vCjeancxOjzAyvou8UiA5J07xMam2VpZRAJmpkZYWllB
+      wkLYUaelTuO2H1SDri4sYNRsZMtdLM0C2FUWFxZQVZXnLp0HOKwIFZ4w48ECOLP0w5EB8MfH
+      8O1leebCG5S3F6l1Dfx3/6YoMvt7+1htBxWcXc3AZrMcFk5ZrDbQ2ihWB3bVoHrf8OcBp4XN
+      UpdBr4WdUpsJ10E1aH5vEwBd1zEMA00TQ6bf70mUJeu69sD7bpZ+OHoXSOuydOsmO+kSVtXJ
+      D8/fO1Qo5jLUWx3sLh+35m+RGBtgae4GgUg/TqnJjbnbjEzMkEuusplXuNCvsl/zIQHBaB+Z
+      RppgOEyxncfmdIHVgs/nOxwcV5ZlUWP0JU+iKlP+0mC4ZumHI5dQttiYnJxh8tlXyC9+zH5d
+      Z9B98G3YvWpQnVa7D1W1cfny5cNpI/3DB8+beebwsfjgwMEPTh8Xzh2MNzk7dbBNcQEB9+Bj
+      XzBB+CYeumqZnBznd7/8v1zfqRNzHvE0SUZVzT2ysPD0e2gAqpUqVqsFvVWh1j77B0OCOT10
+      Jy8Q7ec5u4+91XnqXYOzP1C2YEYPGRdIY2/7DldvLmNzBZh1nP1L4wRzOvKTXcnt8qvfvYvF
+      plJMLpOtn/3RAQRzOjIA3sgQP3/jVZrNFigqNnFBjHBGPXTfJhofwCZpBAYnHhgYSxDOkocG
+      YHFxiR/+4Z8y4++SrIhdIOFsemgAEmPDvPe733KnpjLkEQfBwtn00NOg2dQmsjfOq89Pcf+g
+      EIZh0Gw0sKoqFkXBMHQa9QayxYpqVWi02jjsdrRuB82QUCSDVrtz8MWZzYpFkWl3dawWmWat
+      DlY7DvXsf+UunE4P/eS5AjGknVXefz/NK2+8ie/uuEDlfIZMsUKp3OC5K89QySVZ3W0w2N9H
+      YX8TZBmLK0JxfwsJGBhLcPvmTQYmp2mUCyT6PHy4VuLZfju7dahUaoTCESZGB57QIgvCPUcP
+      jttp8M77H9GVXfzFP/qH2O+7KN4bCJHNZumLH4zmZrW5sEolUvv7WCQL52cmuXnjBi7PAIOB
+      JlmcxPr6GB7qZ2e5xFq2xUhQZavSZdDnwBscp5TZxjD60XUdTdPodrtPZOGfFk+iGlTTNKT7
+      3nez9MORAei2Gyh2B2qnzFvvfsj3X30J992bZGwtz5GpycTdGsntbTwuFavVSqOtYbVozM/d
+      wh0eprC7zmJJ4vyz4yT3D143HPaxvpji2akYO2tphnxOFOXg+OKLalDlS1WJwpOpBv3y+26W
+      fjhyCa0OHz947ftod1c86n1bgKGpC/RrOpIEuXwRbyCM0xNAsViQMOhqOhZFYTQexgAURWLi
+      3AwSYAnE+cHLMWRJ4tVQHPnuoK99/nM9XkxBONqRAZBkhb5Y/5ETyLKCLB8koi96MCiu1frF
+      8OYS1rs3E5DuG0zocA0mSSh3P/TKfSMei3sQCydFnN8UTE0EQDA1EQDB1EQABFMTARBMTQRA
+      MDURAMHURAAEUxMBEEzt2MUe1UKG9Z09bA4f04lhmtUCSyub+MIxnFKTVLbI0PgUueQq9a7C
+      cH+IxcVVfH1xPKqVoaib62sFzg+52EjVsHncRIN+XA61F8snCF/r2AFweIOMyzLrqQIAO1u7
+      TF+8xNriLWoSXLo4zfz8bSy2AKOhNhUlQCQYZGwqwZ2FRbZTLSyyzlaqgM9tZzdfJJdO8dzl
+      S6Ia9CFENWjvHDsAtUKaZKHN+emJgwtjLBKNVhtN15EwaDebSBYH3W6LeqON6lNo3J027FdZ
+      2q0zFXexulcl7JGJDwyQ39sU1aBfQ1SD9s6xl7DT1dBbFda3kjRrVaanEqytrDE0msAutVnb
+      TDMxOUEpnaTacTHutmCLx1EAfzjOsFEiEPYyJLtweh3YLCpqPN6DRROERzt2AEKxQUKxBwez
+      nTo3e/cnF7PnAgDYB0bou/uoP3jwGDYHQwMHN8MYjDsBUAGXGjx2wwXhcRBngQRTEwEQTE0E
+      QDA1EQDB1EQABFMTARBMTQRAMDURAOEbMwyNd3/zd6TLzcPHSnub/PLdjwG49elb3FrfY397
+      lfc/+ZxKLsX/+p//jb/9P7/j2q0FDKPLb3/7FugNFj//lKsLayd+L2IRAOGb6zTxBgJU6m0A
+      9G6Tzxc3qJXTVLJJkukCuWwe1ROmW0/jCcV5fjrCpVf/AKWUYXtzhb18jY2leRoOL59/8gH/
+      9T/9D9onuEjHDoBhGOSy6cNBs7ROg8X5ebZ203SaVW6vrNHVDPKZFFu7aYrZPebm5lhYXqNU
+      KmPobfbTeYxOg/3UPqVa63Evk9Ajks2F33kwBpSmaWwvXSeVKzF3c4533v+EcjHLraVVfD7/
+      V6Ydmxzmd+/N88ZLU/zus02m+5ycu/QCMwMxTvJ23McuhWjVyiyvrHD5+SgOGcqZHZqyk7Fw
+      kMXFeSbGBri9uka31SagdtGGzqPKecamEqwsLKB7VVazbfSKREO2sbqVxOPxcHF2qhfLJzxG
+      9cIe1xfXkNxVtqxNXnztx/zVMzLzS5M8M3OOZiVNqmjw2Udvs7eXZzOVwx8dw24HtzrA6PAu
+      8f4hJsYK2J0ehvpsKE7b8T+Ej9Gx5213++gL3btnpDcyzJizxsLCAjarFYfHi76+japG8Htb
+      FBqdw+f6VIX1Updhr4XdWpfxoIJjcpr83iaGYXxNObRBcmOdQHwYl2rB0Lrc+PwTLP5BJvs9
+      fHh1judefIlbn75LodpmaGSMrfU1kJ3MXpphtD/O0tIyM9MJUhtrVKwBpgaj3/pNe9JOSzm0
+      zRPmF//gzwDodDpYZZ1uV2dmYpJut4vFEWTIAUPx17j8whdT+YAumiHz/VdfRAdefek5DGAo
+      6oJoELpdTqrw+tgBKOfT7KYytCzbKJ06feEAyVQap9uLx9LhxvVbxEcmySZXWEkpXLxsJ1Vy
+      IAGhaISd1RShwT7S1QyKTcVqUXA4HF9bDq03y9y4fpMr/gF8LjutRpmBqct8/sE77K1b+cHr
+      L/LuB5/w5k/eZO6jtwmPTuPXdmDsp+zdeIuIq8u7Hy0x4OuwVYC5xbdY8oT4kz9/80TXPt/U
+      aSiH3slWqDV6t7eu2hRG+r6669Rrx+5/bzDKa69HwdCp1hq43S58oXtr04HRg//7gs8ePjY8
+      PnYwM0+Q7105qPx87mL48O9h7/jXzlO2e5mdHDn83ep0s/LJW0xd+h5KbZd3f3+VcqOD3q6y
+      17RxwWtj4+5zx4fD/N3bt/nxawl+9dEOf/Kj8+j2l7DsbtP9Nm+ASf3nX17j6tJuz15/LO7n
+      3/6LN3v2+g/z7ftfknG7XY+xKQ9Xze9y9fo86m6DpE9iNOZnba9CR1nnXCKMpKe4cuUFkht3
+      uHDlCgCqOwAWCPWPoF9dY3xkhM8XdlCtdnwuDTngE6fAhKdjBegO9vNX//SvAYNCoYg/EOCv
+      xy8c/r1/aOLuT/e2RPHJF+/+5OWf/OWfAvCP//yPALjoBRLijjTCUxKAeyQCgcBJN0I4Q059
+      AP7Vf3mH6yt7PXv9ycEQ//qf/bhnry+cbqc+ALpuoOm9+7pcewKnGIXTSxwHCqYmAiCYmgiA
+      YGoiAIKpnWgAuu0W7e5J1gIKZnfss0DNapGPP7vOi6/+ELsFSpkkK9tZ7E4PTqlJudYg2D9O
+      LrlCR5MZGRti7tpN+sYSWLQOibiHD24XeH7EyUZBo9vtEI5EGYyFHz3zU0DrtskXKwSDQRrV
+      Em1dJuBzU8jnsDk8GJ069WYHm2rH5XQh06UrWVEMjVIhhy8Sxyq2u6fGt6gG9TMUD/PFhTzp
+      dJmLVy6zsjBPQ5K4fOUCN2/cxOEeYCLQIif7GB4cZGwqwdbSIuvpOnG/lc18i5jPTskIUMim
+      GOgLHVkN2vMrhgyONQjsO7/5JS5/mLmuTNBpZWtjnZkrL5LL7LG6keS1Z2f49a/e4wc/f4Od
+      rTQeW52qEUDplFFaZcqKm9HEOWZGv/lwkKehGrTX/WAYxokMxnvsALSbDSqVKu5qlVqnjsdt
+      ZWt7h44mYZU67CZ3UL0x6sUM2y2dwZkx9vYPpo2E3FxbzXJxPMytzRz9PidOp51mWX5oNWjP
+      b6ItcaxBYH0uN8m9XWKJFwg6qlyvtOmL91PaWcFqdzM6eZ6ZtQyzk9Okd1IYiheH0aZjWHEq
+      Hi597zU++Owaz0wMfeN5noZq0F73gyRJJzIY77HnqGldIvFh0FrUW22GhhNYs1mG4jNYJY1M
+      vszkYIhmzUdLl/GqMmoigQXwhPp5zhnCabdx2R3GYVNwyxYCrkQPFq03KrU6bneASmGX7UIL
+      v9vG1sYdSi3QmnXuX1f7qZAiQl9rjZprCqm1iyxLSPQ41MI3dvz7A7g8OFyeBx4LRb4oQlPo
+      ix7syzvdXpx3H1Xtd29+ISu4XQePul2Wu1OAVbEfu+En5Ydv/jGapqMoMoauYyAhyxKzUwkk
+      SUYGXv/Z6wBcev2PuIiExDlAAqYB+NlrL51Y+4UHnfpSiNPmYFOtHPysKIePK8pXdxckSb67
+      rhdr/NNKBOARjG6Lxv/+5z2dh/WZv8A6/eQvBhFEAB5N19C2PurpLCzDr/T09YWHE2ekBVMT
+      ARBMTQRAMDURAMHURAAEUxMBEEztO58GbTdKLCxtEOyL47F22drNMj51jtzOGtWuhcGwm+W1
+      TVyBMAGPi3jIxeJmkal+F1t7FTzhCBGf89EzEoQe+M4BqBUyNDQJu91OcneLC+cTzC8uYbG4
+      iLva1KxB/O6DwXHXFhagWaXZ1thOVrG77CwvLbKqyLz03GUMwzgcI/RJ+rr5GUbv26I/Ypmf
+      xBj6hq4/0Ab9S78/CU96fvAYdoF8sXFeeu4ZUtvrR/79/sKvoMfGdqlDv8dCpqHjkGTGJ6fx
+      Om3ftRlPtdNYKNHzKtxT4jtvAeqlHBs7+wSj/XgsXeYW7pCYnCG3e4e9uoXZYSvZRggZCERi
+      FNtZgpEQVa2I6najWK1IoRCSJB3+exLlv/f7uvkZUu/b8qhlfhIfRkmWH2jDaeuHXvnOAXAH
+      IjwTiBz+7o8cXOjhTkwfPhaJ9QGg2N1MJdwATIzdqyj1OmPftRmC8K2Is0CCqYliOOGppHXb
+      rN7ZYmpqAsnQ+fTTa8xMDPD+x9fRZAdjfXbWttKEBwZ59vIltleWGZqYopDJUMjnODc7C4gt
+      gPCUyu2nuDG3hAGszF3l99eWsAVivPmzH2OTNGYvvYjH6uHlZy9xc73I+s3fs7iVZen2Crc+
+      /5D/97f/nZVMQ2wBhKdTdGCESGCddi3Dr9+6SqGYZ3u/gCW3xvC5S/c9U6a49B6BmZfJzr+L
+      b+wKaC1emY3yXq4utgDC02lt4RorK8ssbVf5m3/5N/z0Jz9lJOonW4PJgRAA/uDBLZcsdIgP
+      JpAkGB4exu8PINlcBJwWsQUQnk6J2SskZq8c/v7KKwfXWT/3wvOHj13+3mUA3vijvwBg4BcH
+      //c9e3D7rmeDvToINgw21m5T7VgYjBxVClFgqt/F5l4VryiFEE5QTwKgaXXqHZW4q/U1pRA1
+      HPeVQrz8/JVHv7BgWobWofrvH/9npCfHABLwxdBxXy6F2LpbCpEWpRDCKdCTLYCsOHGpHfYa
+      1oNSiOa9UohgO0cwEqSqf1EKYUMOPR3jggpnT2+OASSJkftLIfqOKIUYvb8Uoq8nzRCER5GM
+      u7W2tVrtRAYn/bJarYbLde/+w1v7JWrN3t2h3G6zMha/d4dywzAeLD4zdLTd6z2bP4DkG0B2
+      31sJ6Lr+QGGYVirR3evdjQIBbOPjSFbr4e9f7oftdJlqo9Wz+atWC+P99+4A+tV+MNB2rz32
+      +R4G4LQolUr4fL4Tm7+u64dVqSfZhpOojLyfWfpBfA/wJSf9wTstbThpT+o9eGoDkN9Pktwv
+      EB8aw6NKoNiwKlCtNXB7PCwv3+bczAx3lm5R6+p4/FFGBx/vsUa7VmJxbROr3c3MxAjVShWn
+      24PWadHRweVwsLO+TK7ewunyMzn2zYdEP47M7hapbBFPIErEY8WqStzZ7XJuPML1Tz9GUR0M
+      jE0T9Dz+QYgL6V2293LEBkfwOhSQrdgsEpVqHbfHe9gP67cXqHR0PL4QY0Pf/N4I30SnXmZx
+      dQNFdTE7OUqlUsXh9mB0WrQ1cDkdLM59jiZZCMeGiUfu7fI+pasag910kQsXLhC0t5m7vcHN
+      m3M06lWK+TSLqxuH9/+t1tvMzM5SyqUfeytW17eYnhzHYlHoNOsUi3nmbi1z/UgaZocAAAHo
+      SURBVNpnFIolAMrlOlPnZqmXC499/gd09nMVLly8QLOcJbe/R0s30O/eW1lXVCbHB0jvZ3ow
+      b4Od/RwXLlwg7NSYW1rn5s156rUaxUKOW8tr9/qh1mJm9hzlfPaxt2JtfZOJyXGsFoVOq0Gx
+      WGBufuluPxQxgGZX4tz0OLn0g/N/SgMAutalq2u0qiU84QE8Ngs7uzvk8gUKpcrh87rtGouL
+      y0zMnHvsbbBIBh1s1Ktl8pld0rkC+UKR8bER1tfX0QwD9DZLi0uMTkw99vkfkDD0Lpqm09X0
+      r1xeWcrts7lXZSox2JO5G7pGV9NoVsu4Q3G8qoWd3SS5QoFCsXz4PK1TZ3HxNonpmcfeBosM
+      HcNKvVamkE2xn82TzxcZHx9lY2Odrm7QqBZYXk8xNT3+wLRP7UFws1pkbXOH/uFRSvtJJIef
+      gB12siV8/iCqRSIUCpFNpwlGoz1Jut5ts7q6hmF1MhT1spHcx+3xI3erNAyVidFB8tksvnAY
+      Sw8P5urlAuvbu/QNjKAaLVS3k0rNIORzkM5kiUYjj36RL/nG/VArcWczSWxwlEpmB0P1EnLK
+      JDMlvD4fdqty2A+BaBTlka94fLrWZm11DU1xMBLzs769h9vjQ9Hq1DUribEhspkMkWj0KyuI
+      /w9deLE5SZD8NAAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
